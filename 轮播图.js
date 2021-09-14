@@ -24,6 +24,7 @@ const bindEventSlide = () => {
     showImg(index);
     showDot(index);
     slide.dataset.active = index;
+    console.log('luo')
   });
 };
 //点击小圆点轮播图切换
@@ -36,7 +37,7 @@ const bindEventDot = () => {
     showImg(index);
   });
 };
-const 定时播放 = () => {
+const pay = () => {
   setInterval(() => {
     let slide = e(".img-slide");
     let nb = parseInt(slide.dataset.active);
@@ -66,7 +67,7 @@ const showDot = index => {
 const __main = () => {
   bindEventSlide();
   bindEventDot();
-  定时播放();
+  pay();
 };
 
 __main();
